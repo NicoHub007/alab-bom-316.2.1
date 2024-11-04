@@ -1,5 +1,6 @@
 // Create your game here!
 const maxTries = 5;
+const displayTries = document.getElementById("user-tries")
 function startGame() {
     const answer = Math.floor(Math.random() * 10);
     // promptUser();
@@ -11,6 +12,7 @@ function startGame() {
             break;
         }
         numTries++;
+        displayTries.textContent = "Your have " + maxTries - numTries + "left..."
         console.log("User is on try " + numTries);
     }
 }
